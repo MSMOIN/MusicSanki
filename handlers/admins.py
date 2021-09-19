@@ -60,7 +60,7 @@ async def stop(_, message: Message):
 @authorized_users_only
 async def skip(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ 𝗡𝗼𝘁𝗵𝗶𝗻𝗴 😔 𝗜𝘀 𝗣𝗹𝗮𝘆𝗶𝗻𝗴 🎶 𝗧𝗼 𝗦𝗸𝗶𝗽 💫")
+        await message.reply_text("❗ 𝗡𝗼𝘁𝗵𝗶𝗻𝗴 🌴 𝗜𝘀 𝗣𝗹𝗮𝘆𝗶𝗻𝗴 🎶 𝗧𝗼 𝗦𝗸𝗶𝗽 💫")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -72,4 +72,4 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file"]
             )
 
-        await message.reply_text("➡️ 𝗦𝗸𝗶𝗽 💫 𝗧𝗵𝗲 𝗖𝘂𝗿𝗿𝗲𝗻𝘁 😊 𝗦𝗼𝗻𝗴 ❤️🤟")
+        await message.reply_text("➡️ 𝗦𝗸𝗶𝗽 🌴𝗧𝗵𝗲 𝗖𝘂𝗿𝗿𝗲𝗻𝘁 🌿 𝗦𝗼𝗻𝗴 ❤️🍁")

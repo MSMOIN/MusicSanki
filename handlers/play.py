@@ -108,7 +108,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "EsportPlayer"
+        user.first_name = "Sanki_Smoker"
     usar = user
     wew = usar.id
     try:
@@ -160,7 +160,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="❰ 𝗚𝗿𝗼𝘂𝗽 😎❤️🤟 ❱",
+                        text="❰ 𝗚𝗿𝗼𝘂𝗽 🌴🍁❤: ❱",
                         url="https://t.me/Prayagraj_Op")
                    
                 ]
@@ -198,7 +198,7 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="❰ 𝗚𝗿𝗼𝘂𝗽 😎❤️🤟 ❱",
+                            text="❰ 𝗚𝗿𝗼𝘂𝗽 🌴🍁❤ ❱",
                             url="https://t.me/Prayagraj_Op"),
                         
 
@@ -214,7 +214,7 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                            text="❰ 𝗚𝗿𝗼𝘂𝗽 😎❤️🤟 ❱",
+                            text="❰ 𝗚𝗿𝗼𝘂𝗽 🌴🍁❤ ❱",
                             url="https://t.me/Prayagraj_Op"),
 
                         ]
@@ -265,7 +265,7 @@ async def play(_, message: Message):
                     [
                       
                         InlineKeyboardButton(
-                            text="❰ 𝗚𝗿𝗼𝘂𝗽 😎❤️🤟 ❱",
+                            text="❰ 𝗚𝗿𝗼𝘂𝗽 🌴🍁❤ ❱",
                             url="https://t.me/Prayagraj_Op"),
 
                     ]
