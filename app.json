@@ -2,7 +2,7 @@
   "name": "Patricia",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/AKGANISH/MusicSanki",
+  "repository": "https://github.com/Uw9nwiwhi2j8/MusicSanki",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
