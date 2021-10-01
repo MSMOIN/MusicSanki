@@ -10,7 +10,8 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
     
     await message.reply_text(
-        f"""**✨𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗣𝗼𝘄𝗲𝗿 𝗠𝘂𝘀𝗶𝗰 𝗕𝗼𝘁\n💕𝗙𝗲𝗲𝗹 𝗡𝗼 𝗟𝗮𝗴 𝗠𝘂𝘀𝗶𝗰 𝗜𝗻 𝗩𝗼𝗶𝗰𝗲-𝗖𝗵𝗮𝘁 \n🌴𝗦𝗼𝘂𝗿𝗰𝗲 𝗖𝗼𝗱𝗲 𝗢𝗳 𝗧𝗵𝗶𝘀 𝗕𝗼𝘁 [𝗖𝗹𝗶𝗰𝗸](https://t.me/Prayagraj_Op)\n🌱𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗱 𝗕𝘆 [𝗛𝗲𝘅𝗼𝗿](https://t.me/Its_Hexor)**
+        f"""**
+𝐓𝐡𝐢𝐬 𝐈𝐬 𝐀𝐝𝐯𝐚𝐧𝐜𝐞 🥀𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 🎶 𝐁𝐨𝐭 \n𝐑𝐮𝐧 𝐎𝐧 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 🥀 𝐕𝐩𝐬 💫𝐒𝐞𝐫𝐯𝐞𝐫 🌎 \n𝐅𝐞𝐞𝐥 ❤️ 𝐇𝐢𝐠𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐮𝐬𝐢𝐜 🎧 𝐈𝐧 𝐕𝐜 😎🤟 \n⭐𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 [𝗲𝗦𝗽𝗼𝗿𝘁 𝗛𝗲𝘅𝗼𝗿](https://t.me/Its_Hexor)**
         """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -19,28 +20,28 @@ async def start(_, message: Message):
                         "❰𝗢𝘄𝗻𝗲𝗿❱", url="https://t.me/Sanki_Owner")
                   ],[
                     InlineKeyboardButton(
-                        "❰𝗦𝘂𝗽𝗽𝗼𝗿𝘁❱", url="https://t.me/Sanki_BOTs_Support"
+                        "❰𝗦𝘂𝗽𝗽𝗼𝗿𝘁🌎❱", url="https://t.me/eSport_BOTs"
                     ),
                     InlineKeyboardButton(
-                        "❰𝗚𝗿𝗼𝘂𝗽❱", url="https://t.me/Prayagraj_Op"
+                        "❰𝗚𝗿𝗼𝘂𝗽🚩❱", url="https://t.me/EsportClan"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "❰𝗖𝗼𝗺𝗺𝗮𝗱𝘀❱", url="https://telegra.ph/%EA%9C%B1%E1%B4%8D%E1%B4%8F%E1%B4%8B%E1%B4%87%CA%80-%E1%B4%8D%E1%B4%9C%EA%9C%B1%C9%AA%E1%B4%84-%CA%99%E1%B4%8F%E1%B4%9B-%E1%B4%84%E1%B4%8F%E1%B4%8D%E1%B4%8D%E1%B4%80%C9%B4%E1%B4%85%EA%9C%B1-08-29"
+                        "❰𝗖𝗼𝗺𝗺𝗮𝗱𝘀🥀❱", url="https://telegra.ph/%EA%9C%B1%E1%B4%8D%E1%B4%8F%E1%B4%8B%E1%B4%87%CA%80-%E1%B4%8D%E1%B4%9C%EA%9C%B1%C9%AA%E1%B4%84-%CA%99%E1%B4%8F%E1%B4%9B-%E1%B4%84%E1%B4%8F%E1%B4%8D%E1%B4%8D%E1%B4%80%C9%B4%E1%B4%85%EA%9C%B1-08-29"
                     )]
             ]
         ),
      disable_web_page_preview=True
     )
 
-@Client.on_message(filters.command("hexor") & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command("Esport") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**𝗛𝗲𝘅𝗼𝗿'𝘅𝗗 𝗢𝗻𝗹𝗶𝗻𝗲🎶**""",
+      await message.reply_text("""**𝐞𝐒𝐩𝐨𝐫𝐭 𝐌𝐮𝐬𝐢𝐜'𝐗 𝐎𝐧𝐥𝐢𝐧𝐞\n🌠𝐞𝐒𝐩𝐨𝐫𝐭_𝐎𝐩 🥀**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🔈𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/SankiPublicEnjoy")
+                        "𝗦𝘂𝗽𝗽𝗼𝗿𝘁❤️", url="https://t.me/eSport_BOTs")
                 ]
             ]
         )
