@@ -1,5 +1,4 @@
 import os
-import asyncio
 from os import path
 from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
@@ -11,8 +10,6 @@ import requests
 import aiohttp
 from youtube_search import YoutubeSearch
 import converter
-from datetime import datetime
-from time import time
 from downloaders import youtube
 from config import DURATION_LIMIT
 from helpers.filters import command
@@ -22,12 +19,6 @@ from helpers.gets import get_url, get_file_name
 import aiofiles
 import ffmpeg
 from PIL import Image, ImageFont, ImageDraw
-
-
-
-
-
-
 
 
 def transcode(filename):
@@ -108,7 +99,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Sanki_Smoker"
+        user.first_name = "EsportPlayer"
     usar = user
     wew = usar.id
     try:
@@ -160,7 +151,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="❰ 𝗝𝗼𝗶𝗻 𝗚𝗿𝗼𝘂𝗽🐬: ❱",
+                        text="❰ 𝗚𝗿𝗼𝘂𝗽 😎❤️🤟 ❱",
                         url="https://t.me/EsportClan")
                    
                 ]
@@ -198,7 +189,7 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="❰ 𝗝𝗼𝗶𝗻 𝗚𝗿𝗼𝘂𝗽🐬 ❱",
+                            text="❰ 𝗚𝗿𝗼𝘂𝗽 😎❤️🤟 ❱",
                             url="https://t.me/EsportClan"),
                         
 
@@ -214,7 +205,7 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                            text="❰ 𝗝𝗼𝗶𝗻 𝗚𝗿𝗼𝘂𝗽🐬 ❱",
+                            text="❰ 𝗚𝗿𝗼𝘂𝗽 😎❤️🤟 ❱",
                             url="https://t.me/EsportClan"),
 
                         ]
@@ -232,7 +223,7 @@ async def play(_, message: Message):
         await lel.edit("🔎 **𝗙𝗶𝗻𝗱𝗶𝗻𝗴 💫 𝗧𝗵𝗲 𝗦𝗼𝗻𝗴 ❤️ ❰𝗛𝗲𝘅𝗼𝗿 ❤️ 𝗫𝟯 𝗦𝗺𝗼𝗸𝗲𝗿 🚬❱...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🎵 **𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗦𝗼𝘂𝗻𝗱 🔊\n𝗝𝗼𝗶𝗻 @EsportClan**")
+        await lel.edit("🎵 **𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗦𝗼𝘂𝗻𝗱 🔊**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -265,7 +256,7 @@ async def play(_, message: Message):
                     [
                       
                         InlineKeyboardButton(
-                            text="❰ 𝗝𝗼𝗶𝗻 𝗚𝗿𝗼𝘂𝗽🐬 ❱",
+                            text="❰ 𝗚𝗿𝗼𝘂𝗽 😎❤️🤟 ❱",
                             url="https://t.me/EsportClan"),
 
                     ]
