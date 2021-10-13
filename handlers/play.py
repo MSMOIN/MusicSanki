@@ -93,24 +93,52 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 
-@Client.on_message(command("play") & other_filters)
-@errors
+@Client.on_message(command("play") 
+                   & filters.group
+                   & ~filters.edited 
+                   & ~filters.forwarded
+                   & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **° 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐒𝐨𝐧𝐠 🥀 °**...")
-    sender_id = message.from_user.id
-    sender_name = message.from_user.first_name
+    lel = await message.reply("💿**ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴏɴɢ ꜰʀᴏᴍ ꜱᴇʀᴠᴇʀ**")
+    
+    administrators = await get_administrators(message.chat)
+    chid = message.chat.id
 
-    keyboard = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                            text="❰ 𝐆𝐫𝐮𝐨𝐩 🐬 ❱",
-                            url=f"https://t.me/EsportClan")
-                   
-                ]
-            ]
-        )
+    try:
+        user = await USER.get_me()
+    except:
+        user.first_name = "EsportPlayer"
+    usar = user
+    wew = usar.id
+    try:
+        await _.get_chat_member(chid, wew)
+    except:
+        for administrator in administrators:
+            if administrator == message.from_user.id:
+                try:
+                    invitelink = await _.export_chat_invite_link(chid)
+                except:
+                    await lel.edit(
+                        "<b>𝗔𝗱 𝗠𝗲 𝗔𝘀 𝗔𝗱𝗺𝗶𝗻 𝗢𝗳 𝗬𝗼𝘂𝗿 𝗚𝗿𝘂𝗼𝗽  𝗙𝗶𝗿𝘀𝘁 ❰ 𝗛𝗲𝘅𝗼𝗿 ❤️ 𝗫𝟯 𝗦𝗺𝗼𝗸𝗲𝗿 🚬 ❱</b>")
+                    return
+
+                try:
+                    await USER.join_chat(invitelink)
+                    await USER.send_message(
+                        message.chat.id, "**𝗠𝘂𝘀𝗶𝗰 🎶 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 😎 𝗝𝗼𝗶𝗻𝗲𝗱 𝗧𝗵𝗶𝘀 😉 𝗚𝗿𝘂𝗼𝗽 𝗙𝗼𝗿 𝗣𝗹𝗮𝘆 𝗠𝘂𝘀𝗶𝗰 ❤️🤟**")
+
+                except UserAlreadyParticipant:
+                    pass
+                except Exception:
+                    await lel.edit(
+                        f"<b>❰𝗙𝗹𝗼𝗼𝗱 😒 𝗪𝗮𝗶𝘁 𝗘𝗿𝗿𝗼𝗿 😔❱</b>\n𝗛𝗲𝘆 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝗨𝘀𝗲𝗿𝗕𝗼𝘁 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗝𝗼𝗶𝗻 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 𝗗𝘂𝗲 𝗧𝗼 𝗛𝗲𝗮𝘃𝘆 𝗝𝗼𝗶𝗻 𝗥𝗲𝗤𝘂𝗲𝘀𝘁 . 𝗠𝗮𝗸𝗲 𝗦𝘂𝗿𝗲 𝗨𝘀𝗲𝗿𝗕𝗼𝘁 𝗜𝘀 𝗡𝗼𝘁 𝗕𝗮𝗻𝗻𝗲𝗱 😔 𝗜𝗻 𝗚𝗿𝗼𝘂𝗽 𝗔𝗻𝗱 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 😎🤟𝗹𝗮𝘁𝗲𝗿 :) ")
+    try:
+        await USER.get_chat(chid)
+    except:
+        await lel.edit(
+            f"<i>❰𝗛𝗲𝘅𝗼𝗿 ❤️ 𝗫𝟯 𝗦𝗺𝗼𝗸𝗲𝗿 🚬❱ 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝗨𝘀𝗲𝗿𝗕𝗼𝘁 𝗜𝘀 𝗡𝗼𝘁 𝗜𝗻 𝗧𝗵𝗶𝘀 𝗖𝗵𝗮𝘁' 𝗔𝘀𝗸 𝗔𝗱𝗺𝗶𝗻 𝗧𝗼 𝗦𝗲𝗻𝗱 /𝗽𝗹𝗮𝘆 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗙𝗼𝗿 𝗙𝗶𝗿𝘀𝘁 𝗧𝗶𝗺𝗲 𝗧𝗼 𝗔𝗱𝗱 𝗜𝘁 😎🤟</i>")
+        return
 
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
     url = get_url(message)
@@ -128,14 +156,17 @@ async def play(_, message: Message):
         duration = round(audio.duration / 60)
         views = "ʟᴏᴄᴀʟʟʏ ᴀᴅᴅᴇᴅ"
         keyboard = InlineKeyboardMarkup(
-                [
-                    [
+                   [
+                        [
+                            InlineKeyboardButton(
+                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
+                            url=f"https://t.me/eSport_BOTs"),
                         InlineKeyboardButton(
-                            text="❰ 𝐆𝐫𝐮𝐨𝐩 🐬 ❱",
+                            text="𝐆𝐫𝐨𝐮𝐩⭐",
                             url=f"https://t.me/EsportClan")
 
+                        ]
                     ]
-                ]
             )
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
@@ -157,10 +188,13 @@ async def play(_, message: Message):
             url_suffix = results[0]["url_suffix"]
             views = results[0]["views"]
             keyboard = InlineKeyboardMarkup(
-                    [
+                        [
                         [
                             InlineKeyboardButton(
-                            text="ɢʀᴏᴜᴘ",
+                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
+                            url=f"https://t.me/eSport_BOTs"),
+                        InlineKeyboardButton(
+                            text="𝐆𝐫𝐨𝐮𝐩⭐",
                             url=f"https://t.me/EsportClan")
 
                         ]
@@ -172,10 +206,13 @@ async def play(_, message: Message):
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
-                    [
+                 [
                         [
                             InlineKeyboardButton(
-                            text="❰ 𝐆𝐫𝐮𝐨𝐩 🐬 ❱",
+                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
+                            url=f"https://t.me/eSport_BOTs"),
+                        InlineKeyboardButton(
+                            text="𝐆𝐫𝐨𝐮𝐩⭐",
                             url=f"https://t.me/EsportClan")
 
                         ]
@@ -219,14 +256,17 @@ async def play(_, message: Message):
             return
 
         keyboard = InlineKeyboardMarkup(
-                [
-                    [
+               [
+                        [
+                            InlineKeyboardButton(
+                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
+                            url=f"https://t.me/eSport_BOTs"),
                         InlineKeyboardButton(
-                            text="❰ 𝐆𝐫𝐮𝐨𝐩 🐬 ❱",
+                            text="𝐆𝐫𝐨𝐮𝐩⭐",
                             url=f"https://t.me/EsportClan")
 
+                        ]
                     ]
-                ]
             )
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
